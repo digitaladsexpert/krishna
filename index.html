@@ -1,147 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join TRADE WITH SUNIL</title>
-  <meta name="description" content="Join our high-accuracy stock/forex tips Telegram channel. Limited spots. 100% free demo.">
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Radhe</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0e0e0e;
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      animation: fadeIn 1s ease-in;
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background:#f0f4f3;
+      color:#0b1220;
+      padding:0px;
+      display:flex;
+      justify-content:center;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    .wrap{
+      width:100%;
+      max-width:1080px;
+      background:#fff;
+      border-radius:10px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      text-align:center;
+      padding:20px;
     }
 
-    .container {
-      background: #1a1a1a;
-      padding: 30px 20px;
-      max-width: 420px;
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,255,150,0.2);
-      text-align: center;
-      animation: fadeUp 1s ease-out;
+    .logo{
+      width:90px;
+      height:90px;
+      border-radius:16px;
+      background:#e9f6ff;
+      margin:0 auto 14px;
+      overflow:hidden;
+    }
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .heading h1{
+      font-size:20px;
+      font-weight:700;
+      line-height:1.3;
+      margin-bottom:6px;
+    }
+    .accent{color:#0aa3ff;}
+
+    .sub-title{
+      color:#0b6b2e;
+      font-weight:700;
+      margin-bottom:6px;
     }
 
-    .logo {
-      width: 100px;
-      margin-bottom: 20px;
-      border-radius: 50%;
-      border: 2px solid #00ffaa;
+    .stats{
+      margin-bottom:12px;
+      color:#444;
+      font-weight:600;
     }
 
-    h1 {
-      font-size: 1.6rem;
-      color: #00ffaa;
-      margin-bottom: 10px;
+    .desc{
+      padding:10px;
+      font-size:14px;
+      margin-bottom:16px;
+      color:#333;
+    }
+    .desc small{color:#777;}
+
+    .btn-telegram{
+      background:linear-gradient(180deg,#0b7b2b,#045d1f);
+      color:#fff;
+      padding:14px 32px;
+      border-radius:40px;
+      font-weight:800;
+      font-size:18px;
+      text-decoration:none;
+      display:inline-block;
+      animation:pulseBtn 2s infinite ease-in-out;
+      box-shadow:0 0 20px rgba(11,123,43,0.4);
+      margin-bottom:14px;
     }
 
-    .section-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #00ffaa;
-      margin: 20px 0 10px;
+    @keyframes pulseBtn{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.05)}
+      100%{transform:scale(1)}
     }
 
-    .benefit-text {
-      font-size: 0.95rem;
-      margin: 6px 0;
-      color: #ddd;
+    .timer-row{
+      display:flex;
+      gap:8px;
+      justify-content:center;
+      margin-bottom:14px;
+    }
+    .timer-pill{
+      background:#e6f5ff;
+      padding:8px 14px;
+      border-radius:20px;
+      font-weight:700;
     }
 
-    p {
-      font-size: 1rem;
-      margin: 10px 0 20px;
+    .note{
+      font-size:14px;
+      color:#333;
+      margin-bottom:10px;
     }
 
-    .cta-btn {
-      background-color: #00ffaa;
-      color: #000;
-      border: none;
-      padding: 14px 28px;
-      font-size: 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      animation: pulse 1.6s infinite;
-      transition: transform 0.3s ease;
-      margin-top: 20px;
+    .footer-links{
+      margin-top:20px;
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer-links a{
+      color:#0a84ff;
+      text-decoration:none;
+      font-weight:600;
     }
 
-    .cta-btn:hover {
-      transform: scale(1.05);
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0, 255, 170, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(0, 255, 170, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0, 255, 170, 0); }
-    }
-
-    .countdown {
-      font-size: 0.95rem;
-      margin-top: 15px;
-      color: #ffcc00;
-    }
-
-    .disclaimer {
-      font-size: 0.8rem;
-      color: #888;
-      margin-top: 20px;
+    .fb-disclaimer{
+      font-size:12px;
+      color:#777;
+      margin-top:20px;
+      line-height:1.5;
     }
   </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '881012808007949');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=881012808007949&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 </head>
+
 <body>
-  <div class="container">
-    <img src="logo.jpg" alt="Telegram Logo" class="logo" />
-    <h1>Join TRADE WITH SUNIL</h1>
-    <p>🚀 Daily Accurate Calls<br>📈 Free Demo Access<br>🔐 Limited Members Only</p>
 
-    <div class="section-title">Master TRADING STRATEGIES</div>
-    <div class="benefit-text">Learn the TECHNIQUES & INTRADAY STOCK TIPS to Protect your Capital</div>
-    <div class="benefit-text">eLearn the PROCEDURES to Earn More while Investing Lesser Capital</div>
+<div class="wrap">
 
-    <a href="https://t.me/YourChannelUsername" target="_blank">
-      <button class="cta-btn">Join Free Channel</button>
-    </a>
-
-    <div class="countdown">Redirecting in <span id="timer">10</span> seconds...</div>
-
-    <p class="disclaimer">For educational purposes only. Not SEBI registered. DYOR.</p>
+  <div class="logo">
+    <img src="krishna.png" alt="Logo">
   </div>
 
-  <script>
-    let countdown = 10;
-    const timerEl = document.getElementById("timer");
-    const redirectUrl = "https://t.me/YourChannelUsername";
+  <div class="heading">
+    <h1>Learn how to Trade with <span class="accent">The Krishna Crypto Experts</span></h1>
+  </div>
 
-    const interval = setInterval(() => {
-      countdown--;
-      timerEl.textContent = countdown;
-      if (countdown === 0) {
-        clearInterval(interval);
-        window.location.href = redirectUrl;
-      }
-    }, 1000);
-  </script>
+  <div class="sub-title">Unlock the Secrets to Crypto & Forex Success</div>
+  
+
+  <div class="desc">
+    The Best Crypto and Forex Signals For Educational Use Only.<br>
+    <small>No financial advice • Market risk involved</small>
+  </div>
+
+  <!-- ✅ FIXED BUTTON -->
+  <a class="btn-telegram"
+     href="https://t.me/+9eO19NfYFFNhNjRl"
+     target="_self"
+     rel="noopener">
+     View in Telegram
+  </a>
+
+  <div class="timer-row">
+    <div class="timer-pill" id="minutes">10 Min</div>
+    <div class="timer-pill" id="seconds">00 Sec</div>
+  </div>
+
+  <div class="note">
+    If you have <b>Telegram</b>, you can join instantly
+  </div>
+
+  <div class="footer-links">
+   
+    <a href="https://ElitePips.online/privacy" target="_blank">Privacy Policy</a> •
+    <a href="https://ElitePips.online/disclaimer" target="_blank">Disclaimer</a> •
+    <a href="https://ElitePips.online/terms" target="_blank">Terms</a>
+  </div>
+
+  <div class="fb-disclaimer">
+    This site is not a part of the Facebook™ website or Facebook Inc.
+    This site is NOT endorsed by Facebook™ in any way.
+  </div>
+
+</div>
+
+<script>
+let remaining = 10 * 60;
+const m = document.getElementById("minutes");
+const s = document.getElementById("seconds");
+
+function updateTimer(){
+  if(remaining <= 0) return;
+  const min = Math.floor(remaining / 60);
+  const sec = remaining % 60;
+  m.textContent = (min < 10 ? "0"+min : min) + " Min";
+  s.textContent = (sec < 10 ? "0"+sec : sec) + " Sec";
+  remaining--;
+}
+updateTimer();
+setInterval(updateTimer, 1000);
+</script>
+
 </body>
 </html>
