@@ -54,12 +54,6 @@
       margin-bottom:6px;
     }
 
-    .stats{
-      margin-bottom:12px;
-      color:#444;
-      font-weight:600;
-    }
-
     .desc{
       padding:10px;
       font-size:14px;
@@ -80,6 +74,7 @@
       animation:pulseBtn 2s infinite ease-in-out;
       box-shadow:0 0 20px rgba(11,123,43,0.4);
       margin-bottom:14px;
+      cursor:pointer;
     }
 
     @keyframes pulseBtn{
@@ -128,20 +123,22 @@
 
 <!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2098232147597765');
-fbq('track', 'PageView');
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2098232147597765');
+fbq('track','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2098232147597765&ev=PageView&noscript=1"
-/></noscript>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2098232147597765&ev=PageView&noscript=1"/>
+</noscript>
 <!-- End Meta Pixel Code -->
 
 </head>
@@ -159,23 +156,16 @@ src="https://www.facebook.com/tr?id=2098232147597765&ev=PageView&noscript=1"
   </div>
 
   <div class="sub-title">Unlock the Secrets to Crypto & Forex Success</div>
-  
 
   <div class="desc">
     The Best Crypto and Forex Signals For Educational Use Only.<br>
     <small>No financial advice • Market risk involved</small>
   </div>
 
-  <!-- ✅ FIXED BUTTON -->
- <a class="btn-telegram"
-href="https://t.me/+9eO19NfYFFNhNjRl"
-onclick="
-fbq('track','Subscribe');
-"
-target="_blank">
-View in Telegram
-</a>
-
+  <!-- CTA BUTTON -->
+  <a class="btn-telegram" href="#" onclick="openTelegram(event)">
+    View in Telegram
+  </a>
 
   <div class="timer-row">
     <div class="timer-pill" id="minutes">10 Min</div>
@@ -187,7 +177,6 @@ View in Telegram
   </div>
 
   <div class="footer-links">
-   
     <a href="https://ElitePips.online/privacy" target="_blank">Privacy Policy</a> •
     <a href="https://ElitePips.online/disclaimer" target="_blank">Disclaimer</a> •
     <a href="https://ElitePips.online/terms" target="_blank">Terms</a>
@@ -200,6 +189,7 @@ View in Telegram
 
 </div>
 
+<!-- TIMER SCRIPT -->
 <script>
 let remaining = 10 * 60;
 const m = document.getElementById("minutes");
@@ -215,6 +205,32 @@ function updateTimer(){
 }
 updateTimer();
 setInterval(updateTimer, 1000);
+</script>
+
+<!-- TELEGRAM DEEP LINK + FALLBACK -->
+<script>
+function openTelegram(e){
+  e.preventDefault();
+
+  // Telegram App Deep Link
+  var deepLink = "tg://join?invite=9eO19NfYFFNhNjRl";
+
+  // Web Fallback
+  var webLink = "https://t.me/+9eO19NfYFFNhNjRl";
+
+  // Meta tracking
+  if (typeof fbq === "function") {
+    fbq('track','Subscribe');
+  }
+
+  // Try opening app
+  window.location.href = deepLink;
+
+  // Fallback after delay
+  setTimeout(function(){
+    window.location.href = webLink;
+  }, 1500);
+}
 </script>
 
 </body>
